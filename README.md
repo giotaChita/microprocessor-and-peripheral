@@ -18,3 +18,11 @@ calculate its factor.
 The final hash will be stored in a memory location of your choice.
 ![image](https://user-images.githubusercontent.com/69098448/230342479-2fe2781a-022b-434c-ba2c-2003edce35e5.png)
 
+
+1. A basic C language main routine in which you dynamically provide the alphanumeric to be controlled using UART
+
+2. An assembly language routine that will compute the hash of the alphanumeric, store its value in a memory location and return it to main
+
+3. One routine in assembly that will compute the single digit from the hash and then its factorial, then store its value in a memory location and return it to main
+
+5. Print, using printf(), the results with different inputs to your program that are based on different combinations.
