@@ -1,0 +1,387 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.38.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Christos Sidiras, Aristotle University of Thessaloniki, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.38.0.0
+Toolchain Path:  Z:\programms\Keil\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.19
+Assembler:       Armasm.exe V6.19
+Linker/Locator:  ArmLink.exe V6.19
+Library Manager: ArmAr.exe V6.19
+Hex Converter:   FromElf.exe V6.19
+CPU DLL:         SARMCM3.DLL V5.38.0.0
+Dialog DLL:      DCM.DLL V1.17.5.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.1.0.0
+Dialog DLL:      TCM.DLL V1.56.4.0
+ 
+<h2>Project:</h2>
+C:\keil_proj\lab3_final\lab3.uvprojx
+Project File Date:  05/23/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.19', folder: 'Z:\programms\Keil\ARM\ARMCLANG\Bin'
+Build target 'Target 1'
+lab3.c(5): warning: In file included from...
+./drivers/drivers\uart.h(43): warning: // comments are not allowed in this language [-Wcomment]
+#endif // UART_H
+       ^
+lab3.c(6): warning: In file included from...
+./drivers/drivers\leds.h(20): warning: // comments are not allowed in this language [-Wcomment]
+#endif // LEDS_H
+       ^
+./drivers/drivers\leds.h(22): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+                                                                   ^
+lab3.c(7): warning: In file included from...
+./drivers/drivers\queue.h(15): warning: // comments are not allowed in this language [-Wcomment]
+        uint8_t* data; //!< Array of data, stored on the heap.
+                       ^
+lab3.c(8): warning: In file included from...
+./drivers/drivers\timer.h(29): warning: // comments are not allowed in this language [-Wcomment]
+#endif // TIMER_H
+       ^
+./drivers/drivers\timer.h(31): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+                                                                   ^
+lab3.c(10): warning: In file included from...
+./drivers/drivers\platform.h(18): warning: non-portable path to file '<stm32f4xx.h>'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include <STM32F4xx.h>
+         ^~~~~~~~~~~~~
+         <stm32f4xx.h>
+./drivers/drivers\platform.h(20): warning: // comments are not allowed in this language [-Wcomment]
+// Core CPU frequency.
+^
+./drivers/drivers\platform.h(161): warning: invalid UTF-8 in comment [-Winvalid-utf8]
+// *******************************ARM University Program Copyright <A9> ARM Ltd 2016*************************************   
+                                                                   ^
+lab3.c(11): warning: In file included from...
+./drivers/drivers\gpio.h(16): warning: // comments are not allowed in this language [-Wcomment]
+        Reset,   //!< Resets the pin-mode to the default value.
+                 ^
+lab3.c(12): warning: In file included from...
+./delay.h(24): warning: // comments are not allowed in this language [-Wcomment]
+#endif // DELAY_H
+       ^
+lab3.c(13): warning: // comments are not allowed in this language [-Wcomment]
+//#include "stm32f4xx_usart.h" // for trial of usart_cmd and disable_irq? Answer: nope
+^
+lab3.c(21): warning: '_Bool' is a C99 extension [-Wc99-extensions]
+static bool first_time_aem = true; //flag to stop programm until the user gives his aem fisrt
+       ^
+Z:\programms\Keil\ARM\ARMCLANG\Bin\..\include\stdbool.h(15): note: expanded from macro 'bool'
+    #define bool _Bool
+                 ^
+lab3.c(28): warning: no previous extern declaration for non-static variable 'period' [-Wmissing-variable-declarations]
+int period = 1;                                                                 //for everything
+    ^
+lab3.c(28): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int period = 1;                                                                 //for everything
+^
+lab3.c(29): warning: no previous extern declaration for non-static variable 'sum_last_digits' [-Wmissing-variable-declarations]
+int sum_last_digits = 0;                                //holds the sum of the last 2 digits of aem
+    ^
+lab3.c(29): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+int sum_last_digits = 0;                                //holds the sum of the last 2 digits of aem
+^
+lab3.c(31): warning: no previous extern declaration for non-static variable 'response_from_dht' [-Wmissing-variable-declarations]
+uint8_t response_from_dht = 0;  
+        ^
+lab3.c(31): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t response_from_dht = 0;  
+^
+lab3.c(35): warning: no previous extern declaration for non-static variable 'sum_byte5' [-Wmissing-variable-declarations]
+uint8_t sum_byte5 = 0;
+        ^
+lab3.c(35): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t sum_byte5 = 0;
+^
+lab3.c(39): warning: no previous prototype for function 'DHT11_init' [-Wmissing-prototypes]
+void DHT11_init(void)  //init the pin which data wire is connected to.
+     ^
+lab3.c(39): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DHT11_init(void)  //init the pin which data wire is connected to.
+^
+static 
+lab3.c(44): warning: no previous prototype for function 'DHT11_start' [-Wmissing-prototypes]
+void DHT11_start(void){
+     ^
+lab3.c(44): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void DHT11_start(void){
+^
+static 
+lab3.c(65): warning: implicit conversion changes signedness: 'int' to 'uint8_t' (aka 'unsigned char') [-Wsign-conversion]
+                        response = -1;
+                                 ~ ^~
+lab3.c(53): warning: no previous prototype for function 'DHT11_check_response' [-Wmissing-prototypes]
+uint8_t DHT11_check_response(void){
+        ^
+lab3.c(53): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t DHT11_check_response(void){
+^
+static 
+lab3.c(73): warning: no previous prototype for function 'DHT11_read' [-Wmissing-prototypes]
+uint8_t DHT11_read(void){
+        ^
+lab3.c(73): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t DHT11_read(void){
+^
+static 
+lab3.c(82): warning: variable 'i' is uninitialized when used here [-Wuninitialized]
+                                i&= ~(1<<(7-j));   // write 0 (26-28us)
+                                ^
+lab3.c(75): note: initialize the variable 'i' to silence this warning
+        uint8_t i,j;
+                 ^
+                  = '\0'
+lab3.c(118): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                return (float)(Temp_1 + (float)Temp_2/10.0);    
+                                        ^~~~~~~~~~~~~~
+lab3.c(96): warning: no previous prototype for function 'DHT_GetTemperature' [-Wmissing-prototypes]
+float DHT_GetTemperature(void){
+      ^
+lab3.c(96): note: declare 'static' if the function is not intended to be used outside of this translation unit
+float DHT_GetTemperature(void){
+^
+static 
+lab3.c(125): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void turn_on_led_isr(){                         //opens the led and printf
+                    ^
+                     void
+lab3.c(125): warning: no previous prototype for function 'turn_on_led_isr' [-Wmissing-prototypes]
+void turn_on_led_isr(){                         //opens the led and printf
+     ^
+lab3.c(125): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turn_on_led_isr(){                         //opens the led and printf
+^
+static 
+lab3.c(131): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void turn_off_led_isr(){                        //close the led and print
+                     ^
+                      void
+lab3.c(131): warning: no previous prototype for function 'turn_off_led_isr' [-Wmissing-prototypes]
+void turn_off_led_isr(){                        //close the led and print
+     ^
+lab3.c(131): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void turn_off_led_isr(){                        //close the led and print
+^
+static 
+lab3.c(137): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void toggle_led_isr(){                          //toggle led every seconds
+                   ^
+                    void
+lab3.c(141): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+                int temporary_counter = counter;
+                    ^
+lab3.c(137): warning: no previous prototype for function 'toggle_led_isr' [-Wmissing-prototypes]
+void toggle_led_isr(){                          //toggle led every seconds
+     ^
+lab3.c(137): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void toggle_led_isr(){                          //toggle led every seconds
+^
+static 
+lab3.c(157): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void button_isr(){                                      //when button is pressed, led is toggled.
+               ^
+                void
+lab3.c(157): warning: no previous prototype for function 'button_isr' [-Wmissing-prototypes]
+void button_isr(){                                      //when button is pressed, led is toggled.
+     ^
+lab3.c(157): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void button_isr(){                                      //when button is pressed, led is toggled.
+^
+static 
+lab3.c(192): warning: passing 'char *' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        queue_dequeue(&rx_queue, &uart_input[0]);
+                                                 ^~~~~~~~~~~~~~
+./drivers/drivers\queue.h(46): note: passing argument to parameter 'item' here
+int queue_dequeue(Queue *queue, uint8_t *item);
+                                         ^
+lab3.c(193): warning: passing 'char *' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        queue_dequeue(&rx_queue, &uart_input[1]);
+                                                 ^~~~~~~~~~~~~~
+./drivers/drivers\queue.h(46): note: passing argument to parameter 'item' here
+int queue_dequeue(Queue *queue, uint8_t *item);
+                                         ^
+lab3.c(194): warning: passing 'char *' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        queue_dequeue(&rx_queue, &uart_input[2]);
+                                                 ^~~~~~~~~~~~~~
+./drivers/drivers\queue.h(46): note: passing argument to parameter 'item' here
+int queue_dequeue(Queue *queue, uint8_t *item);
+                                         ^
+lab3.c(195): warning: passing 'char *' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        queue_dequeue(&rx_queue, &uart_input[3]);
+                                                 ^~~~~~~~~~~~~~
+./drivers/drivers\queue.h(46): note: passing argument to parameter 'item' here
+int queue_dequeue(Queue *queue, uint8_t *item);
+                                         ^
+lab3.c(196): warning: passing 'char *' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        queue_dequeue(&rx_queue, &uart_input[4]);
+                                                 ^~~~~~~~~~~~~~
+./drivers/drivers\queue.h(46): note: passing argument to parameter 'item' here
+int queue_dequeue(Queue *queue, uint8_t *item);
+                                         ^
+lab3.c(198): warning: passing 'char *' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+                        if (!queue_dequeue(&rx_queue, &uart_input[5])){ //if there is not 5th digit, so aem has 4 digits
+                                                      ^~~~~~~~~~~~~~
+./drivers/drivers\queue.h(46): note: passing argument to parameter 'item' here
+int queue_dequeue(Queue *queue, uint8_t *item);
+                                         ^
+lab3.c(190): warning: unused variable 'enter' [-Wunused-variable]
+                        uint8_t enter = 0;
+                                ^
+lab3.c(182): warning: no previous prototype for function 'uart_rx_isr' [-Wmissing-prototypes]
+void uart_rx_isr (uint8_t rx ){
+     ^
+lab3.c(182): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void uart_rx_isr (uint8_t rx ){
+^
+static 
+lab3.c(216): warning: a function declaration without a prototype is deprecated in all versions of C [-Wstrict-prototypes]
+void timer_callback_isr(){ //every second second
+                       ^
+                        void
+lab3.c(216): warning: no previous prototype for function 'timer_callback_isr' [-Wmissing-prototypes]
+void timer_callback_isr(){ //every second second
+     ^
+lab3.c(216): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void timer_callback_isr(){ //every second second
+^
+static 
+lab3.c(220): warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+control_led_temp(float temp){
+^
+lab3.c(221): warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+        if (temp == -1000.0) {                                                          //in case of error
+            ~~~~ ^  ~~~~~~~
+lab3.c(221): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        if (temp == -1000.0) {                                                          //in case of error
+            ^~~~ ~~
+lab3.c(224): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        else if (temp > UP_TEMP_THRESHOLD){             //if temperature is over high threshold
+                 ^~~~ ~
+lab3.c(227): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+        else if (temp < DOWN_TEMP_THRESHOLD){ //if temperature is under high threshold
+                 ^~~~ ~
+lab3.c(220): warning: no previous prototype for function 'control_led_temp' [-Wmissing-prototypes]
+control_led_temp(float temp){
+^
+lab3.c(220): note: declare 'static' if the function is not intended to be used outside of this translation unit
+control_led_temp(float temp){
+^
+static 
+lab3.c(233): warning: non-void function does not return a value [-Wreturn-type]
+}
+^
+lab3.c(281): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        sprintf(temp_str, "temp is %.2f\r\n", temp);
+                        ~~~~~~~                               ^~~~
+lab3.c(283): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        printf("temp is %.2f\n", temp);
+                        ~~~~~~                   ^~~~
+lab3.c(298): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        sprintf(temp_str, "temp is %.2f\r\n", temp);
+                        ~~~~~~~                               ^~~~
+lab3.c(300): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        printf("temp is %.2f\n", temp);
+                        ~~~~~~                   ^~~~
+lab3.c(315): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        sprintf(temp_str, "temp is %.2f\r\n", temp);
+                        ~~~~~~~                               ^~~~
+lab3.c(317): warning: implicit conversion increases floating-point precision: 'float' to 'double' [-Wdouble-promotion]
+                        printf("temp is %.2f\n", temp);
+                        ~~~~~~                   ^~~~
+lab3.c(323): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+lab3.c(271): warning: mixing declarations and code is a C99 extension [-Wdeclaration-after-statement]
+        float temp; //holds the temperature 
+              ^
+lab3.c(34): warning: no previous extern declaration for non-static variable 'Rh_1' [-Wmissing-variable-declarations]
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+        ^
+lab3.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+^
+lab3.c(34): warning: no previous extern declaration for non-static variable 'Rh_2' [-Wmissing-variable-declarations]
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+              ^
+lab3.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+^
+lab3.c(34): warning: no previous extern declaration for non-static variable 'Temp_1' [-Wmissing-variable-declarations]
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+                    ^
+lab3.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+^
+lab3.c(34): warning: no previous extern declaration for non-static variable 'Temp_2' [-Wmissing-variable-declarations]
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+                            ^
+lab3.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t Rh_1, Rh_2, Temp_1, Temp_2;
+^
+lab3.c(24): warning: unused variable 'aem' [-Wunused-variable]
+static int aem;                                                                 //aem
+           ^
+64 warnings generated.
+compiling lab3.c...
+linking...
+Program Size: Code=20956 RO-data=1588 RW-data=32 ZI-data=1968  
+".\Objects\lab3.axf" - 0 Error(s), 64 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.ARM_Compiler.1.7.2.pack
+                Keil.ARM_Compiler.1.7.2
+                Keil ARM Compiler extensions for ARM Compiler 5 and ARM Compiler 6
+   * Component: STDERR Variant: ITM Version: 1.2.0
+   * Component: STDIN Variant: ITM Version: 1.2.0
+   * Component: STDOUT Variant: ITM Version: 1.2.0
+
+Package Vendor: Keil
+                https://www.keil.com/pack/Keil.STM32F4xx_DFP.2.17.0.pack
+                Keil.STM32F4xx_DFP.2.17.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+   * Component: Startup Version: 2.6.3
+
+<h2>Collection of Component include folders:</h2>
+  ./RTE/_Target_1
+  Z:/programms/Keil/ARM/CMSIS/5.9.0/CMSIS/Core/Include
+  Z:/programms/Keil/Keil/STM32F4xx_DFP/2.17.0/Drivers/CMSIS/Device/ST/STM32F4xx/Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: Keil.ARM Compiler::Compiler:I/O:STDERR:ITM:1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil.ARM Compiler::Compiler:I/O:STDIN:ITM:1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil.ARM Compiler::Compiler:I/O:STDOUT:ITM:1.2.0
+      Source file:   Source/retarget_io.c
+
+   * Component: Keil::Device:Startup:2.6.3
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/arm/startup_stm32f401xe.s
+      Source file:   MDK/Device/Source/ARM/STM32F401xx_OPT.s
+      Source file:   MDK/Device/Source/ARM/STM32F4xx_OTP.s
+      Include file:  Drivers/CMSIS/Device/ST/STM32F4xx/Include/stm32f4xx.h
+      Source file:   Drivers/CMSIS/Device/ST/STM32F4xx/Source/Templates/system_stm32f4xx.c
+Build Time Elapsed:  00:00:04
+</pre>
+</body>
+</html>
